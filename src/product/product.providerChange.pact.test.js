@@ -29,6 +29,8 @@ describe('Pact Verification', () => {
       provider: 'pactflow-example-provider',
       consumerVersionSelectors: [
         { mainBranch: true },
+        { branch: 'feat/new-field' },
+        { branch: process.env.GIT_BRANCH },
         { deployed: true },
         { matchingBranch: true }
       ],
